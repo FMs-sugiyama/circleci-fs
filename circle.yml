@@ -14,7 +14,11 @@ deployment:
     branch: production
     commands:
       - echo 'production'
-  staging:
-    branch: master
+  feature-1:
+    branch: feature/1
     commands:
-      - echo 'master'
+      - echo 'feature/1'
+  feature-2:
+    branch: feature/2
+    commands:
+      - echo 'feature/2'
