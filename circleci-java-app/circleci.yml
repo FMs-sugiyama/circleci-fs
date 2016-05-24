@@ -3,13 +3,11 @@ machine:
     version: oraclejdk8
 
 dependencies:
-  override:
-    - mvn dependency:resolve
+  pre:
+    - mvn integration-test
 
 
 test:
-  override:
-    - mvn integration-test
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
