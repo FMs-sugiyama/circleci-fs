@@ -49,4 +49,15 @@ public class HelloWorldTest {
         assertEquals(expResult, result);
     }
 
+    /**
+     * Test of sayHelloWorld method, of class HelloWorld.
+     */
+    @Test
+    public void testSayHelloGitFlow() {
+        System.out.println("sayHelloGitFlow");
+        HelloWorld instance = new HelloWorld();
+        String expResult = "Hello Git Flow!!";
+        String result = instance.sayHelloGitFlow();
+        assertEquals(expResult, result);
+    }
 }
