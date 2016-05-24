@@ -16,9 +16,9 @@ import org.junit.Test;
  *
  * @author sugiyama
  */
-public class HelloWorldIT {
+public class HelloWorldTest {
 
-    public HelloWorldIT() {
+    public HelloWorldTest() {
     }
 
     @BeforeClass
