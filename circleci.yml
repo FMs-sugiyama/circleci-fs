@@ -4,4 +4,4 @@ machine:
 
 test:
   override:
-    - mvn site
+    - cd circleci-java-app; mvn site
