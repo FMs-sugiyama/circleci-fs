@@ -4,4 +4,4 @@ machine:
 
 test:
   override:
-    - mvn package clean
+    - mvn clean test
