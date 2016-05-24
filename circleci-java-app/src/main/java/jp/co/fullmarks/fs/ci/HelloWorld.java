@@ -14,4 +14,8 @@ public class HelloWorld {
     public String sayHelloWorld() {
         return "Hello World!!";
     }
+
+    public String sayHelloGitFlow() {
+        return "Hello Git Flow!!";
+    }
 }
