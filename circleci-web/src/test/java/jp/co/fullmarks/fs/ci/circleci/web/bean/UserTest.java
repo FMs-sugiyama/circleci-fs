@@ -49,7 +49,7 @@ public class UserTest {
         birthday.set(2002, Calendar.JUNE, 7);
 
         Calendar today = Calendar.getInstance();
-        today.set(2016, Calendar.JUNE, 6);
+        today.set(2016, Calendar.JUNE, 7);
 
         User instance = new User("Ryo", birthday.getTime());
         instance.today = today.getTime();
