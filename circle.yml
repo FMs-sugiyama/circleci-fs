@@ -3,6 +3,10 @@ machine:
   java:
     version: oraclejdk8
 
+dependencies:
+  pre:
+      - sudo pip install awscli
+
 test:
   override:
     - cd circleci-java-app; mvn test
@@ -12,14 +16,10 @@ test:
 
 deployment:
   production:
-    branch: production
+    branch: master
     commands:
-      - echo 'production'
+      - sh scripts/deploy_production.sh
   feature-1:
     branch: feature/1
     commands:
-      - echo 'feature/1'
-  feature-2:
-    branch: feature/2
-    commands:
-      - echo 'feature/2'
+      - sh scripts/deploy_development.sh
