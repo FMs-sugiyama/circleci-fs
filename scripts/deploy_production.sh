@@ -10,5 +10,6 @@ trap "aws ec2 revoke-security-group-ingress --region ${AWS_DEFAULT_REGION} --gro
 aws ec2 authorize-security-group-ingress --region ${AWS_DEFAULT_REGION} --group-name ${SECURITY_GROUP_NAME} --protocol tcp --port 22 --cidr ${IP}/32
 
 scp ~/.aws/config deploy@52.69.196.119:~/
+ssh deploy@52.69.196.119 'sh ~/deploy.sh'
 
 echo 'production'
