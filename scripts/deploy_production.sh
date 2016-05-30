@@ -2,6 +2,7 @@
 
 set -ex
 
+AWS_DEFAULT_REGION="ap-northeast-1"
 SECURITY_GROUP_NAME="circleci"
 IP=`curl inet-ip.info`
 
