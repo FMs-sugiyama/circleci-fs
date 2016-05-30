@@ -28,6 +28,6 @@ public class SampleService {
         Calendar calendar = Calendar.getInstance();
         calendar.set(2002, Calendar.JUNE, 7);
         final Date birthday = calendar.getTime();
-        return Response.status(200).entity(new User("Ryo", birthday)).build();
+        return Response.status(200).entity(new User("Ver2", birthday)).build();
     }
 }
