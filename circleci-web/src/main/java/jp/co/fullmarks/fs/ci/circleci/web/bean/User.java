@@ -19,9 +19,27 @@ import org.joda.time.Years;
 @XmlRootElement
 public class User implements Serializable {
 
+    enum Sex {
+
+        MALE,
+        FEMALE;
+
+        @Override
+        public String toString() {
+            switch (this) {
+                case MALE:
+                    return "男";
+                case FEMALE:
+                    return "女";
+            }
+            return null;
+        }
+    }
+
     public String name;
     public Date birthday;
     public Date today = new Date();
+    public Sex sex = Sex.MALE;
 
     public User(String name, Date birthday) {
         this.name = name;
