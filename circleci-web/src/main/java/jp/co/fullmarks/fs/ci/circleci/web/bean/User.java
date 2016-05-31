@@ -40,6 +40,7 @@ public class User implements Serializable {
     public Date birthday;
     public Date today = new Date();
     public Sex sex = Sex.MALE;
+    public String occupation = "生徒";
 
     public User(String name, Date birthday) {
         this.name = name;
