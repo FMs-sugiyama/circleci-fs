@@ -19,7 +19,7 @@ import org.joda.time.Years;
 @XmlRootElement
 public class User implements Serializable {
 
-    enum Sex {
+    public enum Sex {
 
         MALE,
         FEMALE;
