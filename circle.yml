@@ -20,6 +20,7 @@ deployment:
     branch: master
     commands:
       - sh scripts/deploy_production.sh
+      - sh scripts/deploy_development.sh
   feature:
     branch: feature/1234
     commands:
