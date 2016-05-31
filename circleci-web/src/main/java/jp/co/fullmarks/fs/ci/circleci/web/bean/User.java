@@ -6,11 +6,8 @@
 package jp.co.fullmarks.fs.ci.circleci.web.bean;
 
 import java.io.Serializable;
-import java.util.Calendar;
 import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
-import org.joda.time.LocalDate;
-import org.joda.time.Years;
 
 /**
  *
@@ -48,15 +45,16 @@ public class User implements Serializable {
     }
 
     public int getAge() {
-        Calendar to = Calendar.getInstance();
-        to.setTime(this.birthday);
-
-        Calendar from = Calendar.getInstance();
-        from.setTime(this.today);
-
-        return Years.yearsBetween(
-                new LocalDate(to.get(Calendar.YEAR), to.get(Calendar.MONTH) + 1, to.get(Calendar.DAY_OF_MONTH)),
-                new LocalDate(from.get(Calendar.YEAR), from.get(Calendar.MONTH) + 1, from.get(Calendar.DAY_OF_MONTH))
-        ).getYears();
+        return 12;
+//        Calendar to = Calendar.getInstance();
+//        to.setTime(this.birthday);
+//
+//        Calendar from = Calendar.getInstance();
+//        from.setTime(this.today);
+//
+//        return Years.yearsBetween(
+//                new LocalDate(to.get(Calendar.YEAR), to.get(Calendar.MONTH) + 1, to.get(Calendar.DAY_OF_MONTH)),
+//                new LocalDate(from.get(Calendar.YEAR), from.get(Calendar.MONTH) + 1, from.get(Calendar.DAY_OF_MONTH))
+//        ).getYears();
     }
 }
