@@ -5,6 +5,10 @@
  */
 package jp.co.fullmarks.fs.ci.circleci.web.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
+import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
+import com.google.common.collect.ImmutableSet;
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
@@ -14,6 +18,16 @@ import javax.ws.rs.core.Application;
  */
 @javax.ws.rs.ApplicationPath("api")
 public class ApplicationConfig extends Application {
+
+    @Override
+    public Set<Object> getSingletons() {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new JaxbAnnotationModule());
+        return ImmutableSet
+                .<Object>builder()
+                .add(new JacksonJaxbJsonProvider(mapper,
+                                JacksonJaxbJsonProvider.DEFAULT_ANNOTATIONS)).build();
+    }
 
     @Override
     public Set<Class<?>> getClasses() {
